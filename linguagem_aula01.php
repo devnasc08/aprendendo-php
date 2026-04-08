@@ -1,5 +1,7 @@
 <?php
-
+//          VARIÁVEIS / OPERADORES
+//          VARIÁVEIS / OPERADORES
+//          VARIÁVEIS / OPERADORES
 echo "<h1>Programando com PHP</h1>";
 
 // Comentário de uma linha
