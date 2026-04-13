@@ -2,13 +2,23 @@
 $resultado= "";
 $numero = 0;
 if(isset($_POST["jogar"])){
-    // Sorteio Inicial
+    // Sorteio Inicial de 1 a 10
     $numero = rand(1,10);
 
-    
-    while(){
 
+    while($numero<1 || $numero > 10){
+        $numero = rand(1,10);
     }
+
+//Verifica resultado
+if($numero == 7){
+    $resultado = "Você ganhou!! Número sorteado:".$numero;
+}
+else{
+    $resultado = "Texte novamente! Número Sorteado:".$numero;
+}
+
+
 }
 ?>
 
