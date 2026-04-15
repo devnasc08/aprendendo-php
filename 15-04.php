@@ -94,9 +94,96 @@ echo strpos("Programando com PHP", "PHP");  // Procurar texto
 
 // ==== implode() -> Juntar array com string
 
-$array = ["PHP", "HTML", "CSS"];
-echo implode("-", $array);
+// $array = ["PHP", "HTML", "CSS"];
+// echo implode("-", $array);
 
+
+/*
+
+// ======================= EX PRÁTICO ============================
+
+$nome = "   kauã nascimento      ";
+
+echo "Original :$nome <br>";
+
+// ======================================
+
+$nome = trim($nome);
+
+echo "Sem espaço $nome <br>";
+
+//===========================================
+
+$nome = ucwords($nome);
+
+echo "formatado: $nome <br>";
+
+// ========================================
+
+echo "Total de letras: " . strlen($nome);  
+
+*/
+
+/*
+Erros PHP exibidos
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+ */
+ 
+
+$resultado = "";
+
+
+if(isset($_POST["enviar"])){
+    
+    $frase = $_POST("frase");
+    
+    $espaco = trim($frase);
+    
+    $caracteres = strlen($frase);
+    
+    $upperCase = strtoupper($frase);
+    
+    $lowercase = strtolower($frase);
+    
+    $formatado = ucwords($frase);
+    
+    $resultado = "
+    Frase sem espaço: $espaco <br>
+    Quantidade de caracteres: $caracteres <br>
+    Frase Maiúscula: $upperCase <br>
+    Frase Minúsucla: $lowercase <br>
+    Formatado: $formatado <br>";
+    
+    
+}
 
 
 ?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Strings PHP</title>
+</head>
+ 
+<body>
+    <h2>Trabalhando com Strings</h2>
+    <form method="post">
+        Digite uma frase: <br><br>
+        <input type="text" name="frase" size="40" required>
+        <br><br>
+        <button type="submit" name="enviar">Processar</button>
+    </form>
+    <br>
+    <div>
+        <?php echo $resultado; ?>
+    </div>
+</body>
+ 
+</html>
+ 
