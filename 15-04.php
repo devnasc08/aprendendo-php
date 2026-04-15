@@ -5,9 +5,9 @@
 // DATAS
 // echo date("d/m/y");
 
-$date = date("d/m/y");
-echo '<br>';
-echo "Data de hoje = ".$date;
+// $date = date("d/m/y");
+// echo '<br>';
+// echo "Data de hoje = ".$date;
 
 /*
 
@@ -27,7 +27,7 @@ s       |       segundos         |   45
 
 // Forma moderna de trabalhar com data
 
-$data = new DateTime(); // new = Criando a instancia da classe
+//$data = new DateTime(); // new = Criando a instancia da classe
 
 /*
 data - é um objeto (criado com new DateTime();)
@@ -46,10 +46,40 @@ format() é um método da classe DateTime
 
 // echo $diferenca->days."dias";
  
-$dataNascimento = new DateTime("2008-11-19");
-$hoje = new DateTime();
-$idade = $hoje->diff($dataNascimento);
-echo " Idade: " . $idade->y . "anos";
+// $dataNascimento = new DateTime("2008-11-19");
+// $hoje = new DateTime();
+// $idade = $hoje->diff($dataNascimento);
+// echo " Idade: " . $idade->y . "anos";
+
+
+
+// ================================= STRINGS ==========================================
+ 
+// TRABALHANDO COM STRINGS
+/*
+$nome = "kaua nascimento santos";
+echo strlen($nome); //Quantidade de caracteres
+echo '<br>';
+echo strtoupper($nome); // MAIÚSCULAS | UPPERCASE
+echo '<br>';
+echo strtolower($nome); // MINÚSCULAS | lowercase
+echo '<br>';
+echo ucfirst($nome); // Primeira letra Maiúsculas | PascalCase
+echo '<br>';
+echo ucwords($nome); // Todas primeiras letras das palavras em maiúsculas | 
+echo '<br>';
+echo trim($nome); //Remove todos os espaços em branco
+echo '<br>';
+echo strpos("Programando com PHP", "PHP");  // Procurar texto
+*/
+
+
+$texto = "PHP,HTML,CSS";
+echo '<br>';
+$array = explode (",",$texto);
+echo '<br>';
+print_r($array);
+
 
 
 
