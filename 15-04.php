@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 // TRABALHANDO COM DATAS NO PHP
 
@@ -33,7 +33,7 @@ s       |       segundos         |   45
 data - é um objeto (criado com new DateTime();)
 (->) acessa algo dentro de objeto
 format() é um método da classe DateTime
- */ 
+ */
 
 // echo ("data atual = ".$data);
 //  echo $data->format("d/m/y");
@@ -45,7 +45,7 @@ format() é um método da classe DateTime
 // $diferenca = $data1->diff($data2);
 
 // echo $diferenca->days."dias";
- 
+
 // $dataNascimento = new DateTime("2008-11-19");
 // $hoje = new DateTime();
 // $idade = $hoje->diff($dataNascimento);
@@ -54,7 +54,7 @@ format() é um método da classe DateTime
 
 
 // ================================= STRINGS ==========================================
- 
+
 // TRABALHANDO COM STRINGS
 /*
 $nome = "kaua nascimento santos";
@@ -74,12 +74,28 @@ echo strpos("Programando com PHP", "PHP");  // Procurar texto
 */
 
 
-$texto = "PHP,HTML,CSS";
-echo '<br>';
-$array = explode (",",$texto);
-echo '<br>';
-print_r($array);
+// ===== Explode -> Transformar em Array ====
 
+// $texto = "PHP,HTML,CSS";
+// echo '<br>';
+// $array = explode(",", $texto);
+// echo '<br>';
+// print_r($array);
+
+
+/* $txtPhp = "O, PHP, (Hypertext, Preprocessor), é, uma, linguagem, de, programação,
+  focada, no, desenvolvimento, web, back-end, ou, seja, ele, trabalha, na, parte, 
+  do, servidor, processando, informações, antes, que, a, página, seja, enviada, para, 
+  o, navegador, do, usuário";
+  echo '<br>';
+  $array = explode(",", $txtPhp);
+  echo '<br>';
+ print_r($array); */
+
+// ==== implode() -> Juntar array com string
+
+$array = ["PHP", "HTML", "CSS"];
+echo implode("-", $array);
 
 
 
